@@ -6,7 +6,7 @@ export const {
 	PORT,
 	MODE,
 	IN_PROD = (MODE === "prod"),
-	DB = 'mongodb://localhost:27017/hieucaodb',
+	DB = 'mongodb+srv://hieucao192:helloworld123@authenticationtest.6lh8w.mongodb.net/learnApollo?retryWrites=true&w=majority',
 	BASE_URL,
 	URL = `${BASE_URL}${PORT}`,
 } = parsed;

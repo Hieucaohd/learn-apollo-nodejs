@@ -29,11 +29,9 @@ const startApp = async () => {
         app.use(graphqlUploadExpress());
         server.applyMiddleware({ app });
 
-        await new Promise(r => app.listen({ port: 4000 }, r));
-        console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
-        // app.listen(PORT, () =>
-        //     success({ message: `Server started on PORT ${PORT}`, badge: true })
-        // );
+        app.listen(PORT, () =>
+            success({ message: `Server started on PORT ${PORT}`, badge: true })
+        );
     } catch (err) {
         error({
             message: err.message,
